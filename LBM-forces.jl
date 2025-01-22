@@ -143,7 +143,7 @@ function kernel_collide_TRT_ϕ!(fn, f, F, ρ_, v, ϕ_, is_in, Λ, ν1, ν2)
     return nothing
 end
 
-# Stream 3D:
+# Stream 2D:
 function kernel_stream!(f, fpc, ξ, Nx, Nz)
     i = (blockIdx().x - 1) * blockDim().x + threadIdx().x
     j = (blockIdx().y - 1) * blockDim().y + threadIdx().y
